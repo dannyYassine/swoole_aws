@@ -1,13 +1,10 @@
 {
   "name": "creative",
   "title": "Creative",
-  "version": "3.3.7+1",
+  "version": "3.3.7",
   "homepage": "http://startbootstrap.com/template-overviews/creative",
   "author": "Start Bootstrap",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
-  },
+  "license": "MIT",
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.13.0",
@@ -24,6 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
+    "url": "git+https://github.com/BlackrockDigital/startbootstrap-creative.git"
+  },
+  "description": "Swoole Test application hosted on AWS EC2",
+  "bugs": {
+    "url": "https://github.com/BlackrockDigital/startbootstrap-creative/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
   }
 }
