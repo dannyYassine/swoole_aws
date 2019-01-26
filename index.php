@@ -7,7 +7,8 @@ $http->on("start", function ($server) {
 });
 
 $http->on("request", function ($request, $response) {
-    $response->end(include_once 'index.html');
+    $index = file_get_contents('index.html');
+    $response->end($index);
 });
 
 $http->start();
