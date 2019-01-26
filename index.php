@@ -7,8 +7,7 @@ $http->on("start", function ($server) {
 });
 
 $http->on("request", function ($request, $response) {
-    $response->header("Content-Type", "application/json");
-    $response->send("{id:1}");
+    $response->end("<h1>Hello World. #".rand(1000, 9999)."</h1>");
 });
 
 $http->start();
