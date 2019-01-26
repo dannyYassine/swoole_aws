@@ -3,7 +3,7 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 $app->get('/', function (Request $request, Response $response, array $args) {
-    return file_get_contents('views/index.html');
+    return View::get('index');
 });
 
 $app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
