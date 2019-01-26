@@ -7,6 +7,9 @@ server {
 
 	root /var/www/html;
 
+    error_page 403 404 =404 /swoole_aws/app/views/404.html
+    error_page 502 503 504 =500 /swoole_aws/app/views/500.html
+
 	# Add index.php to the list if you are using PHP
 	#
     #index index.php index.html index.htm index.nginx-debian.html;

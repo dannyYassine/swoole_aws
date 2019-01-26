@@ -19,6 +19,9 @@
             background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
             height: 400px;
             background-position: center;
+            background-size: cover;
+            max-width: 800px;
+            margin: auto;
         }
 
 
@@ -36,7 +39,12 @@
             background: #39ac31;
             margin: 20px 0;
             display: inline-block;}
-        .contant_box_404{ margin-top:-50px;}
+
+        .contant_box_404{
+            z-index: 100;
+            position: relative;
+            margin-top:-50px;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +66,7 @@
 
                         <p>the page you are looking for not avaible!</p>
 
-                        <a href="/" class="link_404">Go to Home</a>
+                        <a href="/" class="link_404 btn">Go to Home</a>
                     </div>
                 </div>
             </div>
