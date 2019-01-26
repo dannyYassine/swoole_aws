@@ -1,0 +1,12 @@
+{
+    "name": "dannyyassine/swoole_aws",
+    "authors": [
+        {
+            "name": "Danny Yassine",
+            "email": "dannyyassine@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0"
+    }
+}
