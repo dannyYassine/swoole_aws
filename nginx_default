@@ -19,9 +19,9 @@ server {
         proxy_pass http://127.0.0.1:9501;
     }
 
-    # Server files
+    # Server public files
     #
-    location ~ \.(gif|jpg|png|css|js)$ {
+    location /public/ {
         root /var/www/html/swoole_aws;
     }
 
