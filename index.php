@@ -7,7 +7,7 @@ $http->on("start", function ($server) {
 });
 
 $http->on("request", function ($request, $response) {
-    $response->end("<h1>Hello World. #".rand(1000, 9999)."</h1>");
+    $response->end(include_once 'index.html');
 });
 
 $http->start();
