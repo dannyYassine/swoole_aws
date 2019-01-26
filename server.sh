@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-php index.php > /dev/null &
+bash -c "exec -a swoole_server php index.php > /dev/null &"
