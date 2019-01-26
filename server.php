@@ -8,6 +8,10 @@ $bridgeManager = new BridgeManager($app);
 
 $http = new Swoole\Http\Server("127.0.0.1", 9501);
 
+$http->set([
+    'worker_num' => 4
+]);
+
 $http->on("start", function ($server) use ($app) {
     echo "Swoole http server is started at http://127.0.0.1:9501\n";
 });
