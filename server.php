@@ -30,7 +30,8 @@ $static = [
     'gif'  => 'image/gif',
     'jpg'  => 'image/jpg',
     'jpeg' => 'image/jpg',
-    'mp4'  => 'video/mp4'
+    'mp4'  => 'video/mp4',
+    'ttf'  => 'font/ttf'
 ];
 
 $http->on("request", function ($request, $response) use ($bridgeManager, $static) {
