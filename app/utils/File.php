@@ -5,7 +5,11 @@
  */
 class File
 {
-    static private $static = [
+    /**
+     * Allowed files to be served
+     * @var array
+     */
+    private static $static = [
         'css'  => 'text/css',
         'js'   => 'text/javascript',
         'png'  => 'image/png',
@@ -16,9 +20,28 @@ class File
         'ttf'  => 'font/ttf'
     ];
 
-    public static function serveStaticFile(swoole_http_request $request, swoole_http_response $response)
+    /**
+     * @var string
+     */
+    private $directory;
+
+    /**
+     * File constructor.
+     * @param string $directory
+     */
+    public function __construct($directory = __DIR__)
     {
-        $staticFile = __DIR__ . $request->server['request_uri'];
+        $this->directory = $directory;
+    }
+
+    /**
+     * @param swoole_http_request $request
+     * @param swoole_http_response $response
+     * @return bool
+     */
+    public function serveStaticFile(swoole_http_request $request, swoole_http_response $response)
+    {
+        $staticFile = $this->directory . $request->server['request_uri'];
         if (! file_exists($staticFile)) {
             return false;
         }
