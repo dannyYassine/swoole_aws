@@ -11,9 +11,3 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
     $response->getBody()->write("Hello, $name");
     return $response;
 });
-
-//$app->get('/public[/{params:.*}]', function (Request $request, Response $response, array $args) {
-//    $file = file_get_contents(__DIR__.'/public/css/main.css');
-//    $response->getBody()->write($file);
-//    return $response;
-//});
